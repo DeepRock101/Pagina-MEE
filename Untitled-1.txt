@@ -1,0 +1,109 @@
+  <!-- SECCIÓN: carrusel -->
+    
+  <section id="vision" class="fade-in">
+        <h2>Casa</h2>
+  
+</div>
+    <div id="contentItemsCarrusel">
+            <div class="ItemCarrusel" id="ItemCarrusel1" >
+                <div class="tarjetasCarrusel" id="Tarjeta1"><img src="Imagenes/Inicio 1.jpg" alt=""></div>
+                    <div class="flechasCarrusel">
+                     <a href="#ItemCarrusel3">
+                        <i><i><img src="Imagenes/icons8-galón-izquierdo-24.png" alt=""></i> </i> 
+                     </a>
+                     <a href="#ItemCarrusel2">      
+                        <i><img src="Imagenes/icons8-chebrón-hacia-la-derecha-24.png" alt=""></i>  
+                    </a>
+                </div>
+            </div>
+
+            <div class="ItemCarrusel" id="ItemCarrusel2">
+                <div class="tarjetasCarrusel" id="Tarjeta2"><img src="Imagenes/Inicio 2.jpg" alt=""></div>
+                    <div class="flechasCarrusel">
+                     <a href="#ItemCarrusel1">
+                        <i><i><img src="Imagenes/icons8-galón-izquierdo-24.png" alt=""></i> </i> 
+                     </a>
+                     <a href="#ItemCarrusel3">      
+                        <i><img src="Imagenes/icons8-chebrón-hacia-la-derecha-24.png" alt=""></i>    
+                    </a>
+                </div>
+            </div>
+
+            <div class="ItemCarrusel" id="ItemCarrusel3">
+                <div class="tarjetasCarrusel" id="Tarjeta3"><Caption><img src="Imagenes/Inicio 3.jpg" alt=""></Caption></div>
+                    <div class="flechasCarrusel">
+                     <a href="#ItemCarrusel2">
+                        <img src="Imagenes/icons8-galón-izquierdo-24.png" alt="">
+                     </a>
+                     <a href="#ItemCarrusel1">      
+                        <i><img src="Imagenes/icons8-chebrón-hacia-la-derecha-24.png" alt="">
+                        <h3>Acciones Notables 4</h3>
+                <p>Descripción de Acciones 4.</p>
+            </i>   
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+<div>
+
+</div>
+            <div id="contentItemsCarrusel">
+
+        <div id="Puntos">           
+            <a href="#ItemCarrusel1"><img src="Imagenes/icons8-bosque-16.png" alt=""></a>
+            <a href="#ItemCarrusel2"><img src="Imagenes/icons8-bosque-16.png" alt=""></a>
+            <a href="#ItemCarrusel3"><img src="Imagenes/icons8-bosque-16.png" alt=""></a>
+        </div>
+
+        </div>
+
+
+
+        
+        </div>
+        
+</section>
+
+--------------------------------------------------------------------------------------------------
+<!-- Buscador html-->
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar por título, tema o palabra clave...">
+            <button><img src="Imagenes/icons8-google-web-search-50.png" alt=""></button>
+        </div>
+
+
+
+
+
+
+/* Buscador css*/
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.search-bar input {
+    width: 50%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+---------------------------------------------------------------------------------------------
