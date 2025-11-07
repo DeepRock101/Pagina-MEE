@@ -120,6 +120,188 @@ nav a:hover {
 
 
 /* =============================
+   RESPONSIVO AVANZADO (MÓVIL Y TABLET)
+   ============================= */
+
+@media (max-width: 768px) {
+  /* Ajustes generales */
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  nav {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu li a {
+    width: 90%;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    border-radius: 25px;
+    background-color: var(--verde-claro);
+    display: block;
+  }
+
+  /* Submenús */
+  .submenu {
+    position: static;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .submenu li a {
+    background-color: var(--verde-oscuro);
+    width: 100%;
+  }
+
+  /* Carrusel */
+  #contentItemsCarrusel {
+    width: 95%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .ItemCarrusel {
+    position: relative;
+    height: auto;
+  }
+
+  .tarjetasCarrusel img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .flechasCarrusel {
+    display: none; /* Oculta flechas en móvil, opcional */
+  }
+
+  #Puntos {
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  /* Secciones */
+  section {
+    padding: 2rem 1rem;
+    max-width: 100%;
+  }
+
+  section h2,
+  section h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    border: none;
+    padding: 0;
+  }
+
+  /* Tarjetas (cards) */
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card {
+    border-radius: 20px;
+    padding: 1rem;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Documentación */
+  .documentacion {
+    padding: 20px;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter {
+    width: 90%;
+    text-align: center;
+  }
+
+  /* Mapas */
+  .mapa iframe {
+    height: 300px;
+  }
+
+  /* Botones */
+  .btn,
+  .btn1 {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.8rem;
+    padding: 1.5rem 1rem;
+  }
+
+  footer .social img {
+    height: 30px;
+  }
+}
+
+/* =============================
+   PANTALLAS PEQUEÑAS (MAX 480px)
+   ============================= */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1rem;
+  }
+
+  nav a {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+  }
+
+  #vision h2 {
+    font-size: 1.2rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  footer {
+    padding: 1rem 0.5rem;
+  }
+
+  footer p {
+    margin-bottom: 0.5rem;
+  }
+}
+
+
+/* =============================
    SECCIONES
    ============================= */
 section {
