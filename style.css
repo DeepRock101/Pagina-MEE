@@ -20,105 +20,329 @@ body {
   line-height: 1.6;
 }
 
+
+
 /* =============================
-   ENCABEZADO
-   ============================= */
+   ENCABEZADO GENERAL
+============================= */
 header {
   background-color: var(--verde-oscuro);
   color: var(--blanco);
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   box-shadow: 0 2px 10px var(--sombra);
 }
 
-header h1 {
-  margin: 0;
-  color: var(--blanco) ;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  text-decoration: none;
-  justify-content: start;
+/* =============================
+   Sección del Logo
+============================= */
+.seccion-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-nav a {
-  color: var(--blanco);
-  margin: 0 2rem;
-  text-decoration: none;
-  transition: color 0.3s;
-  
+.seccion-logo img {
+  height: 80px;
 }
 
+/* Botón con logo */
+.btn1 {
+  background: var(--blanco);
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
 
-nav a:hover {
-  color: var(--verde-suave);
-  
+.btn1:hover {
+  transform: scale(1.05);
 }
 
 /* =============================
-   Menú de navegación con submenús
-   ============================= */
-.menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
+   Navegación
+============================= */
+nav {
+  display: flex;
+  align-items: center;
 }
 
-.menu li {
-    position: relative; /* necesario para posicionar el submenu */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
-.menu li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 0.75rem 1.5rem;
-    display: block;
-    background-color: #4CAF50;
-    border-radius: 30px;
+.seccion-boton {
+  display: flex;
+  align-items: center;
 }
 
-.menu li a:hover {
-    background-color: #45a049;
+/* Botones generales */
+.menu a {
+  font-size: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.2s;
+
 }
 
+/* Hover general */
+.menu a:hover {
+  background-color: #1e463b;
+  transform: scale(1.05);
+}
+
+/* === PERSONALIZACIONES POR BOTÓN === */
+#btn-proyectos a {
+  background-color: var(--verde-claro);
+  color: var(--blanco);
+  font-weight: bold;
+  display: flex;
+
+    
+}
+
+#btn-prueba a {
+  background-color: var(--verde-claro);
+  color: var(--blanco);
+  font-weight: bold;
+  display: flex; 
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#btn-acerca a {
+  background-color: var(--verde-claro);
+  color: var(--blanco);
+  font-weight: bold;
+  display: block;
+
+}
+
+#btn-mapa a {
+  background-color: var(--verde-claro);
+  color: var(--blanco);
+  font-weight: bold;
+  display: flex;
+}
+
+#btn-biblioteca a {
+  background-color: var(--verde-claro);
+  color: var(--blanco);
+  font-weight: bold;
+  display: flex;
+}
+
+#btn-contacto a {
+  background-color: var(--verde-claro);
+  color: var(--blanco);
+  font-weight: bold;
+  display: flex;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  font-size: 1.5rem;              /* igual que .menu a */
+  padding: 0.75rem 1.5rem;        /* igual que .menu a */
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: var(--verde-claro);
+  color: var(--blanco);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover igual que los otros */
+.dropdown-btn:hover {
+  background-color: var(--verde-oscuro);
+  transform: scale(1.05);
+}
+
+/* === SUBMENÚ === */
 
 .submenu {
-    display: none;
-    position: absolute;
-    top: 100%; 
-    left: 0;
-    background-color: #4CAF50;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-radius: 30px;
-    min-width: 150px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  flex-direction: column; /* ✅ Alinea los botones en columna */
+  background-color: var(--verde-claro);
+  border-radius: 20px;
+  padding: 10px;
+  min-width: 220px; /* ✅ Hace que el ancho sea más consistente */
 }
 
-/* Mostrar submenu al pasar el cursor */
 .dropdown:hover .submenu {
-    display: block;
+  display: flex;
 }
 
-/* Estilo de los items del submenu */
 .submenu li a {
-    padding: 10px;
-    color: white;
+  display: block;
+  color: var(--blanco);
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .submenu li a:hover {
-    background-color: #45a049;
+  background-color: var(--verde-oscuro);
+  transform: translateX(4px);
+}
+
+/* Enlaces dentro del submenú */
+.submenu a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  transform: scale(1.05);
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 
+/* Hover sobre enlaces */
+.submenu a:hover {
+  background-color: var(--verde-oscuro);
+  transform: translateX(4px);
+  
+}
+
+/* Ajuste del botón principal */
+.dropdown > a {
+padding: 10px;
+  color: var(--blanco);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.dropdown > a:hover {
+  background-color: var(--verde-oscuro);
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+/* =============================
+   TOGGLE MENÚ MÓVIL
+   ============================= */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* =============================
+   MODO MÓVIL
+   ============================= */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* Mostrar el toggle solo en móvil */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Ocultar el menú por defecto */
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  /* Cuando el toggle está activo, mostrar el menú */
+  nav.active {
+    display: block;
+    background-color: var(--verde-oscuro);
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .submenu {
+    position: static;
+    box-shadow: none;
+  }
+
+  .dropdown:hover .submenu {
+    display: none; /* se desactiva hover en móvil */
+  }
+
+  .dropdown.active .submenu {
+    display: block; /* permitir abrirlo tocando */
+  }
+}
+
+
+
+/* =============================
+   BOTONES
+   ============================= */
+.btn {
+  background-color: var(--verde-claro);
+  color: var(--blanco);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--verde-oscuro);
+  transform: scale(1.05);
+}
+
+.btn1 {
+  background-color: var(--gris-claro);
+  color: var(--blanco);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn1:hover {
+  background-color: var(--blanco);
+  transform: scale(1.05);
+}
 
 
 
@@ -473,44 +697,6 @@ Centro de Documentación Ambiental
   border: none;
   border-radius: 10px;
 }
-
-/* =============================
-   BOTONES
-   ============================= */
-.btn {
-  background-color: var(--verde-claro);
-  color: var(--blanco);
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.btn:hover {
-  background-color: var(--verde-oscuro);
-  transform: scale(1.05);
-}
-
-.btn1 {
-  background-color: var(--gris-claro);
-  color: var(--blanco);
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.btn1:hover {
-  background-color: var(--blanco);
-  transform: scale(1.05);
-}
-
 
 
 /* =============================

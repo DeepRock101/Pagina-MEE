@@ -8,42 +8,93 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- ENCABEZADO -->
-    
- <header>
+   
+
+
+
+ <!-- ENCABEZADO -->
+
+  <header>
     <div>
-        
-    <a href="index.html">
+      <a href="index.html">
         <button class="btn1">
-            <img src="Imagenes/LogoMEE.png" style="height: 80px; vertical-align: middle; margin-right: 4px;"> 
+        <img src="Imagenes/LogoMEE.png" style="height: 80px; vertical-align: middle; margin-right: 4px;"> 
+
         </button>
-    
+      </a>
     </div>
-    </a>
-    
 
-    <nav>
-        <ul class="menu">
-            <li><a href="Proyectos.html">Proyectos</a></li>
+    <!-- Botón menú móvil -->
+     <div class="menu-toggle" id="menuToggle">☰</div>
 
-             <li class="dropdown">
-                <a href="#">Acerca del MEE ▾</a>
-                <ul class="submenu">
-                        <a href="Unete.html"> - Unete a Nuestro Equipo</a>
-                        <li><a href="Quienes.html">- ¿Quienes somos nosotros?</a></li>
-                </ul>
-            </li>
-                <li><a href="mapa.html">Mapa interactivo</a></li>
+    <!-- Navegación principal -->
+<nav id="menu">
+    <ul class="menu">
 
-                <ul class="menu">
-                    <li><a href="Bibloteca.html">Biblioteca</a></li>
-                </ul>
-                    </li>
+      <li id="btn-proyectos">
+        <a href="Proyectos.html">Proyectos</a>
+      </li>
 
-            <li><a href="Contactanos.html">Contacto</a></li>
+      <li id="btn-prueba">
+        <a href="prueba.html">Prueba 1</a>
+      </li>
+
+      <li id="btn-acerca" class="dropdown">
+        <a href="#">Acerca del MEE ▾</a>
+        <ul class="submenu">
+          <li id="btn-unete"><a href="Unete.html">- Únete a Nuestro Equipo</a></li>
+          <li id="btn-quienes"><a href="Quienes.html">- ¿Quiénes somos nosotros?</a></li>
         </ul>
-    </nav>
-</header>
+      </li>
+
+      <li id="btn-mapa">
+        <a href="mapa.html">Mapa Interactivo</a>
+      </li>
+
+      <li id="btn-biblioteca">
+        <a href="Bibloteca.html">Biblioteca</a>
+      </li>
+
+      <li id="btn-contacto">
+        <a href="Contactanos.html">Contacto</a>
+      </li>
+
+    </ul>
+  </nav>
+  </header>
+
+
+  
+
+  <!-- Script para menú adaptable -->
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const menu = document.getElementById("menu");
+    const dropdowns = document.querySelectorAll(".dropdown");
+
+    menuToggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+      menuToggle.classList.toggle("active");
+    });
+
+    // Permite abrir submenús tocando en móvil
+    dropdowns.forEach(drop => {
+      drop.addEventListener("click", () => {
+        drop.classList.toggle("active");
+      });
+    });
+  </script>
+
+
+
+        <section id="vision" class="fade-in">
+
+        <h1>PRUEBA</h1>
+        <p>PRUEBAPRUEBAPRUEBAPRUEBAPRUEBAPRUEBAPRUEBAPRUEBA</p>
+    </section>
+
+
+
 
 
 
