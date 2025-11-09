@@ -1,7 +1,6 @@
 /* =============================
   Colores
-   ============================= */
-
+============================= */
 :root {
   --verde-oscuro: #1e463b;
   --verde-claro: #4caf50;
@@ -22,7 +21,7 @@ body {
 
 /* =============================
    ENCABEZADO GENERAL
-   ============================= */
+============================= */
 header {
   background-color: var(--verde-oscuro);
   color: var(--blanco);
@@ -33,11 +32,20 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   box-shadow: 0 2px 10px var(--sombra);
 }
 
-/* Logo */
-header img {
+/* =============================
+   Sección del Logo
+============================= */
+.seccion-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seccion-logo img {
   height: 80px;
 }
 
@@ -46,96 +54,99 @@ header img {
   background: var(--blanco);
   border: none;
   border-radius: 30px;
-   padding: 0.75rem 1.5rem;
-  cursor: pointer;
-    font-weight: bold;
-  text-transform: uppercase;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-/* Botones generales */
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-}
-
-nav a {
-  background-color: var(--verde-claro);
-  color: var(--verde-claro);
-  text-decoration: none;
-  font-weight: 600;
   padding: 0.5rem 1rem;
-  border-radius: 25px;
-  box-shadow: 0 3px 8px var(--sombra);
-  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
 }
 
-nav a:hover {
-  background-color: var(--verde);
-  color: var(--blanco);
+.btn1:hover {
   transform: scale(1.05);
 }
 
-/* Submenú */
-.dropdown {
-  position: relative;
-}
-
-.submenu {
-  display: none;
-  position: absolute;
-  background-color: var(--verde-claro);
-  padding: 0.5rem 0;
-  list-style: none;
-  margin: 0;
-  top: 100%;
-  left: 0;
-  border-radius: 30px;
-}
-
-.dropdown:hover .submenu {
-  display: block;
-}
-
-.submenu li {
-  padding: 0.5rem 1rem;
-}
-
-.submenu a {
-  background: none;
-  color: var(--verde-claro);
-  box-shadow: none;
-}
-
-.submenu a:hover {
-  background-color: var(--verde-oscuro);
-  color: var(--blanco);
-}
-
-
 /* =============================
-   NAVEGACIÓN ESCRITORIO
-   ============================= */
+   Navegación
+============================= */
+nav {
+  display: flex;
+  align-items: center;
+}
+
 nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   margin: 0;
   padding: 0;
 }
 
-nav a {
-  color: var(--blanco);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
+.seccion-boton {
+  display: flex;
+  align-items: center;
 }
 
-nav a:hover {
-  color: var(--verde-suave);
+/* Botones generales */
+.menu a {
+  font-size: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.2s;
+
+}
+
+/* Hover general */
+.menu a:hover {
+  background-color: #1e463b;
+  transform: scale(1.05);
+}
+
+/* === PERSONALIZACIONES POR BOTÓN === */
+#btn-proyectos a {
+  background-color: var(--verde-claro);
+  color: var(--blanco);
+  font-weight: bold;
+  display: flex;
+
+    
+}
+
+#btn-prueba a {
+  background-color: var(--verde-claro);
+  color: var(--blanco);
+  font-weight: bold;
+  display: block; 
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#btn-acerca a {
+  background-color: var(--verde-claro);
+  color: var(--blanco);
+  font-weight: bold;
+  display: flex;
+}
+
+#btn-mapa a {
+  background-color: var(--verde-claro);
+  color: var(--blanco);
+  font-weight: bold;
+  display: flex;
+}
+
+#btn-biblioteca a {
+  background-color: var(--verde-claro);
+  color: var(--blanco);
+  font-weight: bold;
+  display: flex;
+}
+
+#btn-contacto a {
+  background-color: var(--verde-claro);
+  color: var(--blanco);
+  font-weight: bold;
+  display: flex;
 }
 
 /* Submenú */
@@ -143,30 +154,76 @@ nav a:hover {
   position: relative;
 }
 
+/* Submenú */
+
+
+
+/* Submenú */
 .submenu {
   display: none;
-  position: absolute;
+  position: absolute; 
   background-color: var(--verde-claro);
-  padding: 0.5rem 0;
-  list-style: none;
-  margin: 0;
-  top: 100%;
-  left: 0;
-  box-shadow: 0 2px 8px var(--sombra);
+  font-size: 1em;
+  padding: 0.75rem 1.5rem;
   border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 10px;
+  z-index: 1000;
+
+  
 }
 
+
+/* Mostrar submenú al hacer hover en el padre */
 .dropdown:hover .submenu {
   display: block;
+  top: calc(100% + 10px);
 }
 
+/* Cada elemento del submenú */
 .submenu li {
-  padding: 0.5rem 1rem;
+  width: 100%;
 }
 
+/* Enlaces dentro del submenú */
 .submenu a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  transform: scale(1.05);
   color: var(--blanco);
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s, transform 0.2s;
 }
+
+
+/* Hover sobre enlaces */
+.submenu a:hover {
+  background-color: var(--verde-oscuro);
+  transform: translateX(4px);
+  
+}
+
+/* Ajuste del botón principal */
+.dropdown > a {
+padding: 10px;
+  color: var(--blanco);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.dropdown > a:hover {
+  background-color: var(--verde-oscuro);
+  transform: scale(1.05);
+}
+
+
+
+
+
 
 /* =============================
    TOGGLE MENÚ MÓVIL
@@ -225,10 +282,6 @@ nav a:hover {
     display: block; /* permitir abrirlo tocando */
   }
 }
-
-
-
-
 
 
 /* =============================
