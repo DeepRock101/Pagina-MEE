@@ -1,21 +1,254 @@
-.logo {
-  background: left / cover
-    url("/shared-assets/images/examples/puppy-header.jpg");
+/* =============================
+  Colores
+   ============================= */
+
+:root {
+  --verde-oscuro: #1e463b;
+  --verde-claro: #4caf50;
+  --verde-suave: #a8d5ba;
+  --gris-claro: #f5f5f5;
+  --blanco: #ffffff;
+  --texto: #333333;
+  --sombra: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: var(--gris-claro);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+/* =============================
+   ENCABEZADO GENERAL
+   ============================= */
+header {
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+  padding: 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
-  height: 120px;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font:
-    bold calc(1em + 2 * (100vw - 120px) / 100) "Dancing Script",
-    fantasy;
-  color: #ff0083;
-  text-shadow: black 2px 2px 0.2rem;
+  box-shadow: 0 2px 10px var(--sombra);
 }
 
-header > h1 {
-  margin-bottom: 0;
+/* Logo */
+header img {
+  height: 80px;
 }
 
-header > time {
-  font: italic 0.7rem sans-serif;
+/* Botón con logo */
+.btn1 {
+  background: var(--blanco);
+  border: none;
+  border-radius: 30px;
+   padding: 0.75rem 1.5rem;
+  cursor: pointer;
+    font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Botones generales */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  background-color: var(--verde-claro);
+  color: var(--verde-claro);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  box-shadow: 0 3px 8px var(--sombra);
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+  background-color: var(--verde);
+  color: var(--blanco);
+  transform: scale(1.05);
+}
+
+/* Submenú */
+.dropdown {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: var(--verde-claro);
+  padding: 0.5rem 0;
+  list-style: none;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  border-radius: 30px;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  padding: 0.5rem 1rem;
+}
+
+.submenu a {
+  background: none;
+  color: var(--verde-claro);
+  box-shadow: none;
+}
+
+.submenu a:hover {
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+}
+
+
+/* =============================
+   NAVEGACIÓN ESCRITORIO
+   ============================= */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--verde-suave);
+}
+
+/* Submenú */
+.dropdown {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: var(--verde-claro);
+  padding: 0.5rem 0;
+  list-style: none;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 2px 8px var(--sombra);
+  border-radius: 30px;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  padding: 0.5rem 1rem;
+}
+
+.submenu a {
+  color: var(--blanco);
+}
+
+/* =============================
+   TOGGLE MENÚ MÓVIL
+   ============================= */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* =============================
+   MODO MÓVIL
+   ============================= */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* Mostrar el toggle solo en móvil */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Ocultar el menú por defecto */
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  /* Cuando el toggle está activo, mostrar el menú */
+  nav.active {
+    display: block;
+    background-color: var(--verde-oscuro);
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .submenu {
+    position: static;
+    box-shadow: none;
+  }
+
+  .dropdown:hover .submenu {
+    display: none; /* se desactiva hover en móvil */
+  }
+
+  .dropdown.active .submenu {
+    display: block; /* permitir abrirlo tocando */
+  }
+}
+
+
+
+
+
+
+/* =============================
+   PIE DE PÁGINA
+   ============================= */
+
+footer {
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--verde-suave);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
