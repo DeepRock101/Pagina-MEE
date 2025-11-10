@@ -785,6 +785,7 @@ footer a:hover {
   text-decoration: none;
   color: var(--verde-oscuro);
   padding: 20px;
+  text-decoration: none;
   text-align: center;
   height: 100%;
   width: 100%;
@@ -794,15 +795,21 @@ footer a:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px var(--sombra);
   border-color: var(--verde-claro);
+  text-decoration: none;
+
 }
 
 .card img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 1rem;
+  text-decoration: none;
+
 }
 
 .card h3 {
   color: var(--verde-oscuro);
   margin-top: 0.5rem;
+  text-decoration: none;
+
 }
