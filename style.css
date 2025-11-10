@@ -116,7 +116,7 @@ nav ul {
     
 }
 
-#btn-prueba a {
+#btn-escazu a {
   background-color: var(--verde-claro);
   color: var(--blanco);
   font-weight: bold;
@@ -129,7 +129,7 @@ nav ul {
   color: var(--blanco);
   font-weight: bold;
   display: block;
-
+  text-align: left;
 }
 
 #btn-mapa a {
@@ -158,8 +158,8 @@ nav ul {
 }
 
 .dropdown-btn {
-  font-size: 1.5rem;              /* igual que .menu a */
-  padding: 0.75rem 1.5rem;        /* igual que .menu a */
+  font-size: 1.5rem;              
+  padding: 0.75rem 1.5rem;        
   border-radius: 30px;
   text-transform: uppercase;
   font-weight: bold;
@@ -183,11 +183,11 @@ nav ul {
   position: absolute;
   top: 100%;
   left: 0;
-  flex-direction: column; /* ✅ Alinea los botones en columna */
+  flex-direction: column; 
   background-color: var(--verde-claro);
   border-radius: 20px;
   padding: 10px;
-  min-width: 220px; /* ✅ Hace que el ancho sea más consistente */
+  min-width: 220px; 
 }
 
 .dropdown:hover .submenu {
@@ -297,11 +297,11 @@ padding: 10px;
   }
 
   .dropdown:hover .submenu {
-    display: none; /* se desactiva hover en móvil */
+    display: none; 
   }
 
   .dropdown.active .submenu {
-    display: block; /* permitir abrirlo tocando */
+    display: block; 
   }
 }
 
@@ -399,7 +399,7 @@ section h1 {
 
 .tarjetasCarrusel {
     height: 500%;
-    background-color: #1e463b;/* RESET */
+    background-color: #1e463b;
 * {
   margin: 0;
   padding: 0;
@@ -552,38 +552,7 @@ Puntos del carrusel
     padding: 0 10px;
 }
 
-/* =============================
-   TARJETAS Acciones
-   ============================= */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
 
-.card {
-  background-color: var(--blanco);
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px var(--sombra);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px var(--sombra);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-
-.card h3 {
-  color: var(--verde-oscuro);
-  margin-top: 0.5rem;
-}
 
 /* =============================
 Centro de Documentación Ambiental
@@ -628,52 +597,55 @@ Centro de Documentación Ambiental
 
 /* Cuadrícula de documentos */
 .doc-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
+ display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
 .doc-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    position: relative;
+    background-color: var(--blanco);
+    border-radius: 40px;
+    box-shadow: 0 4px 10px var(--sombra);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    overflow: hidden; 
+    
 }
 
 .doc-card h3 {
-    color: #154d3b;
+    color: var(--verde-oscuro);
     font-size: 1.1rem;
     margin-bottom: 8px;
 }
 
 .doc-card p {
     margin: 4px 0;
+  display: block;
+  text-decoration: none;
+    color: var(--verde-oscuro);
+
     font-size: 0.9rem;
 }
 
 .download {
-    background-color: #4caf50;
+    background-color: var(--verde-claro);
     border: none;
-    color: white;
+    color: var(--blanco);
     padding: 6px 12px;
-    border-radius: 6px;
+    border-radius: 50px;
     cursor: pointer;
     font-size: 0.85rem;
 }
 
 .download:hover {
-    background-color: #3e8e41;
+    background-color: var(--verde-claro);
 }
 
 .tag {
-    position: absolute;
     top: 20px;
     right: 20px;
-    background-color: #154d3b;
-    color: white;
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
     font-size: 0.75rem;
     padding: 3px 8px;
     border-radius: 5px;
@@ -779,7 +751,7 @@ footer a:hover {
 
 #biblioteca a {
     text-decoration: none;
-    color: #4CAF50;
+    color: var(--verde-claro);
     font-weight: bold;
 }
 
@@ -795,30 +767,42 @@ footer a:hover {
    ============================= */
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
 .card {
-    background-color: #ffffff;
-    border-radius: 50px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 20px;
-    text-align: center;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: 2px solid transparent;
+  background-color: var(--blanco);
+  border-radius: 50px;
+  box-shadow: 0 4px 10px var(--sombra);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+  overflow: hidden; 
+}
+.card a {
+  display: block;
+  text-decoration: none;
+  color: var(--verde-oscuro);
+  padding: 20px;
+  text-align: center;
+  height: 100%;
+  width: 100%;
 }
 
 .card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
-    border-color: #4CAF50; /* color verde ambiental */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--sombra);
+  border-color: var(--verde-claro);
 }
 
-.card:active {
-    transform: scale(0.98);
-    background-color: #f0fdf4; /* un tono verde claro al hacer clic */
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  color: var(--verde-oscuro);
+  margin-top: 0.5rem;
 }
