@@ -373,186 +373,6 @@ section h1 {
 }
 
 
-/* =============================
-   CARRUSEL
-   ============================= */
-
-* {
-
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    
-}
-
-#contentItemsCarrusel {
-    height: 500px;
-    overflow: hidden;
-    border-radius: 15px;
-}
-
-.ItemCarrusel {
-    border: 1px solid black;
-    height: 500px;
-    position: relative;
-  
-}
-
-.tarjetasCarrusel {
-    height: 500%;
-    background-color: #1e463b;
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* CONTENEDOR DEL CARRUSEL */
-#contentItemsCarrusel {
-  position: relative;
-  width: 80%;
-  max-width: 800px;
-  height: 450px;
-  margin: 40px auto;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-/* CADA ITEM */
-.ItemCarrusel {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-/* TARJETAS */
-.tarjetasCarrusel img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-/* FLECHAS DE NAVEGACIÓN */
-.flechasCarrusel {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-.flechasCarrusel a img {
-  width: 35px;
-  height: 35px;
-  background-color: rgba(255,255,255,0.7);
-  border-radius: 50%;
-  padding: 6px;
-  transition: background 0.3s;
-}
-
-.flechasCarrusel a img:hover {
-  background-color: rgba(0,150,0,0.8);
-}
-
-/* PUNTOS DE NAVEGACIÓN */
-#Puntos {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 15px;
-}
-
-#Puntos a img {
-  width: 20px;
-  height: 20px;
-  opacity: 0.6;
-  transition: opacity 0.3s;
-}
-
-#Puntos a img:hover {
-  opacity: 1;
-}
-
-/* MOSTRAR SOLO ITEM ACTIVO */
-:target {
-  opacity: 1;
-  z-index: 2;
-}
-
-/* MOSTRAR PRIMER ITEM AL CARGAR */
-#ItemCarrusel1 {
-  opacity: 1;
-  z-index: 1;
-}
-
-/* TRANSICIÓN SUAVE ENTRE ANCLAS */
-html {
-  scroll-behavior: smooth;
-}
-
-/* TITULO */
-#vision h2 {
-  text-align: center;
-  margin-top: 20px;
-  font-family: Arial, sans-serif;
-  color: #1e463b;
-}
-
-}
-
-.flechasCarrusel {
-    position: absolute;
-    top: 0;
-    height: 500%;
-    width: 500%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    box-sizing: border-box;
-    display: flex;
-    
-}
-
-#Tarjeta1 {
-    background-image:  rgb(87, 87, 160);
-    height: 500px;
-    border-radius: 15px;   
-}
-
-#Tarjeta2 {
-    background-color: rgb(87, 87, 160);
-    border-radius: 15px;
-}
-
-#Tarjeta3 {
-    background-color: rgb(140, 38, 38);
-    border-radius: 15px;
-}
-
-/* =============================
-Puntos del carrusel
-   ============================= */
-
-#Puntos {
-    text-align: center;
-    
-}
-
-#Puntos a {
-    text-decoration: none;
-    font-size: 30px;
-    color: white;
-    padding: 0 10px;
-}
-
 
 
 /* =============================
@@ -776,6 +596,7 @@ footer a:hover {
 
 
 
+
 /* =============================
    tarjetas de proyectos
    ============================= */
@@ -793,12 +614,16 @@ footer a:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid transparent;
   overflow: hidden; 
+  
 }
+
 .card a {
   display: block;
   text-decoration: none;
   color: var(--verde-oscuro);
   padding: 20px;
+  max-width: 90%;     
+  max-height: 80%;    
   text-decoration: none;
   text-align: center;
   height: 100%;
@@ -815,7 +640,7 @@ footer a:hover {
 
 .card img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 20px;
   margin-bottom: 1rem;
   text-decoration: none;
 
@@ -826,4 +651,94 @@ footer a:hover {
   margin-top: 0.5rem;
     text-decoration: none;
 
+}
+
+
+/* =============================
+   tarjetas Home
+   ============================= */
+
+   .home {
+  position: relative;
+  width: 80%;
+  margin: 50px auto;
+  background-color: var(--blanco);
+  border-radius: 40px;
+  box-shadow: 0 4px 10px var(--sombra);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--sombra);
+}
+
+/* Contenedor del carrusel */
+.img-slider {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Cada slide */
+.slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: slideShow 12s infinite;
+}
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 4s; }
+.slide:nth-child(3) { animation-delay: 8s; }
+
+/* Imagen */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Texto */
+.caption {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  color: var(--blanco);
+  text-shadow: 0 2px 5px var(--sombra);
+  opacity: 0;
+  animation: textFade 12s infinite;
+}
+
+.slide:nth-child(1) .caption { animation-delay: 0s; }
+.slide:nth-child(2) .caption { animation-delay: 4s; }
+.slide:nth-child(3) .caption { animation-delay: 8s; }
+
+.caption h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.caption p {
+  font-size: 1rem;
+}
+
+/* Animaciones */
+@keyframes slideShow {
+  0% { opacity: 0; }
+  10%, 30% { opacity: 1; }
+  40%, 100% { opacity: 0; }
+}
+
+@keyframes textFade {
+  0% { opacity: 0; transform: translateY(20px); }
+  10%, 30% { opacity: 1; transform: translateY(0); }
+  40%, 100% { opacity: 0; transform: translateY(20px); }
 }
