@@ -505,6 +505,23 @@ Centro de Documentación Ambiental
 }
 
 
+.mapa2 {
+  background-color: var(--blanco);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px var(--sombra);
+  padding: 2rem;
+  text-align: center;
+}
+
+  .mapa2 iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 10px;
+  
+}
+
+
 /* =============================
    ANIMACIONES
    ============================= */
